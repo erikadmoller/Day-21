@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Create To Do List with Backbone</title>
+	</head>
+	<body>
+
+		<nav id="navigation">
+
+				<div class="menu">
+					<a href="#play">Play</a>
+					<a href="#leaderboard">Leaderboard</a>
+					<a href="#settings">Settings</a>
+				</div>
+
+		</nav>
+
+		<main id="app">
+			<div class="page-view" id="play-view">
+			</div>
+
+			<div class="page-view" id="leaderboard-view">
+			</div>
+
+			<div class="page-view" id="settings-view">
+			</div>
+		</main>
+
+
+
+
+
+
+
+
+
+
+	<!-- Must run 'bower init' in the Terminal to create the dependencies and JSON -->
+
+	<!-- These are my library files -->
+		<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script type="text/javascript" src="bower_components/underscore/underscore-min.js"></script>
+		<script type="text/javascript" src="bower_components/backbone/backbone.js"></script>
+
+
+<!-- These are my model files -->
+	<script type="text/javascript" src="scripts/models/ProjectModel.js"></script>
+
+<!-- This is my collection file -->
+	<script type="text/javascript" src="scripts/collection/ProjectsCollection.js"></script> 
+
+<!-- These are my view files -->
+	
+	<script type="text/javascript" src="scripts/views/PlayView.js"></script>
+	<script type="text/javascript" src="scripts/views/LeaderboardView.js"></script>
+	<script type="text/javascript" src="scripts/views/SettingsView.js"></script>
+	<script type="text/javascript" src="scripts/views/AppView.js"></script>
+
+<!-- This is my main file -->
+		<script type="text/javascript" src="scripts/main.js"></script>
+	</body>
+</html>
