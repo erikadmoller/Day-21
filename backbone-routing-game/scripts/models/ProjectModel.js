@@ -1,9 +1,10 @@
 var ProjectModel = Backbone.Model.extend({
 
-// Why these defults in particular?
 	defaults: {
-		title: '',
-		completed: false
+		id: null,
+		name: null,
+		url: null,
+		description: null
 	}
 
 });

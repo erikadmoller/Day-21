@@ -6,28 +6,66 @@ var AppView = Backbone.View.extend({
 		console.log(ProjectsCollection);
 		this.projects = new ProjectsCollection();
 
-		this.playView = new playView({
-			projects: this.projects
+		this.loadingView = new loadingView({
+			
 		});
-		// this.leaderboardView = new leaderboardView({
-		// 	projects: this.projects
-		// });
-		// this.settingsView = new settingsView({
-		// 	projects: this.projects
-		// });
+
+		this.homeView = new homeView({
+			
+		});
+
+		this.playView = new playView({
+		
+		});
+
+		this.leaderboardView = new leaderboardView({
+			
+		});
+
+		this.settingsView = new settingsView({
+			
+		});
 		
 		var self = this;
 
 		var Router = Backbone.Router.extend({
 			routes: {
-				'play': 'play'
-				// 'leaderboard'
+				'loading': 'loading',
+				'home': 'home',
+				'play': 'play',
+				'leaderboard': 'leaderboard',
+				'settings': 'settings',
+				'': 'loading'
+			},
+
+			loading: function() {
+				console.log('loading...')
+				self.hideAllPages();
+				self.loadingView.$el.show();
+			},
+
+			home: function() {
+				console.log('home')
+				self.hideAllPages();
+				self.homeView.$el.show();
 			},
 
 			play: function() {
 				console.log('play')
 				self.hideAllPages();
-				self.homeView.$el.show();
+				self.playView.$el.show();
+			},
+
+			leaderboard: function() {
+				console.log('leaderboard')
+				self.hideAllPages();
+				self.leaderboardView.$el.show();
+			},
+
+			settings: function() {
+				console.log('settings')
+				self.hideAllPages();
+				self.settingsView.$el.show();
 			},
 
 		});

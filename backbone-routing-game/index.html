@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Create To Do List with Backbone</title>
+		<title>Create Game View</title>
 	</head>
 	<body>
 
@@ -11,36 +11,40 @@
 					<a href="#play">Play</a>
 					<a href="#leaderboard">Leaderboard</a>
 					<a href="#settings">Settings</a>
+					<a href="#home">Home</a>
 				</div>
 
 		</nav>
 
 		<main id="app">
+		<div class="page-view" id="loading-view">
+			<p>Loading...</p>
+			</div>
+
+			<div class="page-view" id="home-view">
+			<p>This is my home view</p>
+			</div>
+
 			<div class="page-view" id="play-view">
+			<p>This is my play view</p>
 			</div>
 
 			<div class="page-view" id="leaderboard-view">
+			<p>This is my leaderboard view</p>
 			</div>
 
 			<div class="page-view" id="settings-view">
+			<p>This is my settings view</p>
 			</div>
 		</main>
-
-
-
-
-
-
-
-
 
 
 	<!-- Must run 'bower init' in the Terminal to create the dependencies and JSON -->
 
 	<!-- These are my library files -->
-		<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
-		<script type="text/javascript" src="bower_components/underscore/underscore-min.js"></script>
-		<script type="text/javascript" src="bower_components/backbone/backbone.js"></script>
+	<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="bower_components/underscore/underscore-min.js"></script>
+	<script type="text/javascript" src="bower_components/backbone/backbone.js"></script>
 
 
 <!-- These are my model files -->
@@ -51,6 +55,8 @@
 
 <!-- These are my view files -->
 	
+	<script type="text/javascript" src="scripts/views/LoadingView.js"></script>
+	<script type="text/javascript" src="scripts/views/HomeView.js"></script>
 	<script type="text/javascript" src="scripts/views/PlayView.js"></script>
 	<script type="text/javascript" src="scripts/views/LeaderboardView.js"></script>
 	<script type="text/javascript" src="scripts/views/SettingsView.js"></script>
